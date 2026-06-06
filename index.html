@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sofiviola — утягивающее белье: боди, шорты, слипы и стринги</title>
+    <meta
+      name="description"
+      content="Утягивающее белье Sofiviola для гладкого силуэта под одеждой: боди, шорты, слипы и стринги в базовых оттенках. Выберите модель и перейдите к покупке на Wildberries."
+    />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --silk: #fffaf4;
+        --paper: #f6ebe3;
+        --blush: #eac6c8;
+        --rose: #c9808f;
+        --wine: #4a2c67;
+        --mulberry: #2f1a45;
+        --ink: #271f2a;
+        --muted: #766771;
+        --gold: #b28a55;
+        --line: rgba(74, 44, 103, 0.15);
+        --soft-shadow: 0 24px 70px rgba(47, 26, 69, 0.13);
+        --hard-shadow: 0 34px 90px rgba(47, 26, 69, 0.2);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(74, 44, 103, 0.055) 1px, transparent 1px),
+          linear-gradient(180deg, #fffdf9 0%, var(--paper) 42%, #fffaf6 100%);
+        background-size: 76px 76px, auto;
+        font-family: Inter, Arial, sans-serif;
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .shell {
+        width: min(1220px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .top {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(74, 44, 103, 0.12);
+        background: rgba(255, 250, 244, 0.88);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        display: grid;
+        min-height: 76px;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 22px;
+        color: #5a4c61;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .nav-links:last-child {
+        justify-content: flex-end;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--wine);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 34px;
+        font-weight: 700;
+      }
+
+      .logo img {
+        width: 34px;
+        height: 34px;
+        background: transparent;
+      }
+
+      h1,
+      h2,
+      h3,
+      .display {
+        margin: 0;
+        color: var(--mulberry);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        letter-spacing: 0;
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        min-height: calc(100vh - 76px);
+        grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
+        align-items: center;
+        gap: 54px;
+        padding: 58px 0 82px;
+      }
+
+      .hero::before {
+        position: absolute;
+        inset: 34px auto auto 42%;
+        width: min(48vw, 660px);
+        height: min(48vw, 660px);
+        border: 1px solid rgba(178, 138, 85, 0.24);
+        border-radius: 50%;
+        content: "";
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--wine);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 38px;
+        height: 1px;
+        background: var(--rose);
+        content: "";
+      }
+
+      h1 {
+        margin-top: 18px;
+        color: var(--wine);
+        font-size: clamp(76px, 9vw, 136px);
+        line-height: 0.82;
+      }
+
+      .subtitle {
+        margin: 18px 0 0;
+        color: var(--mulberry);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(34px, 3.8vw, 58px);
+        font-weight: 600;
+        line-height: 0.96;
+      }
+
+      .lead {
+        max-width: 620px;
+        margin: 28px 0 0;
+        color: #594c56;
+        font-size: 18px;
+        line-height: 1.78;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .btn {
+        display: inline-flex;
+        min-height: 52px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 0 22px;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .btn.primary {
+        color: #fff;
+        background: var(--mulberry);
+        box-shadow: 0 16px 32px rgba(47, 26, 69, 0.18);
+      }
+
+      .btn.secondary {
+        color: var(--mulberry);
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.62);
+      }
+
+      .proof-row {
+        display: grid;
+        max-width: 640px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 40px;
+      }
+
+      .proof {
+        min-height: 104px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 250, 244, 0.68);
+      }
+
+      .proof strong {
+        display: block;
+        color: var(--mulberry);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 27px;
+        line-height: 0.95;
+      }
+
+      .proof span {
+        display: block;
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.35;
+      }
+
+      .brand-art {
+        position: relative;
+        min-height: 650px;
+      }
+
+      .art-backdrop {
+        position: absolute;
+        inset: 42px 24px 30px 76px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(246, 226, 213, 0.56)),
+          linear-gradient(90deg, rgba(178, 138, 85, 0.12) 1px, transparent 1px);
+        background-size: auto, 54px 54px;
+        box-shadow: var(--soft-shadow);
+      }
+
+      .hero-pack {
+        position: absolute;
+        right: 64px;
+        top: 112px;
+        z-index: 1;
+        width: min(450px, 66%);
+        border-radius: 8px;
+        opacity: 0.5;
+        filter: saturate(0.95);
+        transform: rotate(-2deg);
+        box-shadow: 0 18px 54px rgba(47, 26, 69, 0.1);
+      }
+
+      .hero-body {
+        position: absolute;
+        right: 28px;
+        bottom: 0;
+        z-index: 3;
+        width: 315px;
+        padding: 14px;
+        border: 1px solid rgba(74, 44, 103, 0.18);
+        border-radius: 8px;
+        background: linear-gradient(180deg, #fffdf9, #f7ece6);
+        box-shadow: var(--hard-shadow);
+      }
+
+      .hero-body img {
+        width: 100%;
+        height: 398px;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .hero-body span {
+        display: flex;
+        min-height: 42px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 10px;
+        color: var(--wine);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .hero-body span::after {
+        color: var(--gold);
+        content: "WB";
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .hero-tag {
+        position: absolute;
+        left: 44px;
+        top: 34px;
+        z-index: 2;
+        width: 126px;
+        opacity: 0.92;
+        transform: rotate(-7deg);
+        filter: drop-shadow(0 20px 26px rgba(47, 26, 69, 0.15));
+      }
+
+      .hero-tag-back {
+        position: absolute;
+        left: 118px;
+        top: 72px;
+        z-index: 1;
+        width: 96px;
+        opacity: 0.58;
+        transform: rotate(6deg);
+        filter: drop-shadow(0 16px 22px rgba(47, 26, 69, 0.11));
+      }
+
+      .side-note {
+        position: absolute;
+        left: 70px;
+        bottom: 74px;
+        width: 292px;
+        padding: 24px;
+        border: 1px solid rgba(178, 138, 85, 0.28);
+        border-radius: 8px;
+        background: rgba(255, 250, 244, 0.86);
+        box-shadow: 0 22px 54px rgba(47, 26, 69, 0.12);
+      }
+
+      .side-note strong {
+        display: block;
+        color: var(--mulberry);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 32px;
+        line-height: 0.92;
+      }
+
+      .side-note span {
+        display: block;
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .section {
+        padding: 88px 0;
+      }
+
+      .section.alt {
+        position: relative;
+        overflow: hidden;
+        border-top: 1px solid rgba(74, 44, 103, 0.1);
+        background:
+          linear-gradient(180deg, #fffdf9 0%, #f4e8df 100%),
+          linear-gradient(90deg, rgba(74, 44, 103, 0.045) 1px, transparent 1px);
+        background-size: auto, 72px 72px;
+        color: var(--ink);
+        scroll-margin-top: 96px;
+      }
+
+      .section.alt::before {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(178, 138, 85, 0.5), transparent);
+        content: "";
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.58fr);
+        align-items: start;
+        gap: 56px;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: clamp(44px, 4vw, 68px);
+        line-height: 0.93;
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        font-weight: 650;
+        line-height: 1.7;
+      }
+
+      .alt h2 {
+        max-width: 760px;
+        color: var(--mulberry);
+      }
+
+      .alt .eyebrow {
+        color: var(--wine);
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        align-items: stretch;
+      }
+
+      .product-card {
+        position: relative;
+        display: flex;
+        min-width: 0;
+        min-height: 0;
+        flex-direction: column;
+        overflow: hidden;
+        border: 1px solid rgba(74, 44, 103, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 252, 248, 0.9);
+        box-shadow: 0 22px 55px rgba(47, 26, 69, 0.1);
+        animation: productReveal 520ms ease both;
+        transition:
+          transform 220ms ease,
+          box-shadow 220ms ease,
+          border-color 220ms ease;
+      }
+
+      .product-card:nth-child(2) {
+        animation-delay: 70ms;
+      }
+
+      .product-card:nth-child(3) {
+        animation-delay: 140ms;
+      }
+
+      .product-card:nth-child(4) {
+        animation-delay: 210ms;
+      }
+
+      .product-card::before {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 2;
+        display: none;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border: 1px solid rgba(74, 44, 103, 0.14);
+        border-radius: 50%;
+        color: rgba(74, 44, 103, 0.78);
+        background: rgba(255, 252, 248, 0.88);
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 18px;
+        font-weight: 700;
+        content: "01";
+      }
+
+      .product-card:nth-child(2)::before {
+        content: "02";
+      }
+
+      .product-card:nth-child(3)::before {
+        content: "03";
+      }
+
+      .product-card:nth-child(4)::before {
+        content: "04";
+      }
+
+      .product-card:hover {
+        border-color: rgba(178, 138, 85, 0.35);
+        box-shadow: 0 28px 70px rgba(47, 26, 69, 0.16);
+        transform: translateY(-5px);
+      }
+
+      .product-photo {
+        display: grid;
+        position: relative;
+        width: 100%;
+        height: 440px;
+        min-height: 440px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        place-items: center;
+        overflow: hidden;
+        padding: 10px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(239, 224, 214, 0.74)),
+          radial-gradient(circle at 50% 28%, rgba(234, 198, 200, 0.28), transparent 42%);
+      }
+
+      .product-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 42%;
+        transition:
+          transform 260ms ease,
+          filter 260ms ease;
+      }
+
+      .product-card:hover .product-photo img {
+        filter: saturate(1.04) contrast(1.01);
+        transform: scale(1.035);
+      }
+
+      .color-shot {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border: 1px solid rgba(74, 44, 103, 0.1);
+        border-radius: 7px;
+        background: #f8f1eb;
+      }
+
+      .product-copy {
+        display: flex;
+        min-width: 0;
+        min-height: 190px;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px 26px 22px;
+      }
+
+      .product-copy h3 {
+        max-width: 440px;
+        color: var(--mulberry);
+        font-size: clamp(34px, 3vw, 46px);
+        line-height: 0.92;
+      }
+
+      .product-copy p {
+        margin: 13px 0 0;
+        max-width: 500px;
+        color: var(--muted);
+        font-size: 15px;
+        font-weight: 650;
+        line-height: 1.55;
+      }
+
+      .product-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        margin-top: 20px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid rgba(74, 44, 103, 0.24);
+        color: var(--wine);
+        font-size: 13px;
+        font-weight: 800;
+        transition:
+          color 180ms ease,
+          border-color 180ms ease,
+          transform 180ms ease;
+      }
+
+      .product-link::after {
+        content: "->";
+      }
+
+      .product-card:hover .product-link {
+        border-color: rgba(178, 138, 85, 0.82);
+        color: #6b3261;
+        transform: translateX(3px);
+      }
+
+      @keyframes productReveal {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .closing {
+        padding: 76px 0 92px;
+        text-align: center;
+      }
+
+      .closing h2 {
+        max-width: 840px;
+        margin: 0 auto;
+      }
+
+      .closing p {
+        max-width: 620px;
+        margin: 22px auto 0;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .closing .actions {
+        justify-content: center;
+      }
+
+      @media (max-width: 1060px) {
+        .shell {
+          width: min(100% - 32px, 1220px);
+        }
+
+        .nav,
+        .hero,
+        .section-head {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          justify-items: center;
+          padding: 16px 0;
+        }
+
+        .nav-links,
+        .nav-links:last-child {
+          justify-content: center;
+        }
+
+        .hero {
+          gap: 28px;
+        }
+
+        .hero::before {
+          display: none;
+        }
+
+        .product-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .product-card {
+          min-height: 0;
+          max-width: 760px;
+          margin: 0 auto;
+        }
+
+        .product-photo {
+          height: 420px;
+          min-height: 420px;
+        }
+
+      }
+
+      @media (max-width: 680px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 40px;
+        }
+
+        h1 {
+          font-size: 76px;
+        }
+
+        .subtitle {
+          font-size: 36px;
+        }
+
+        .proof-row,
+        .product-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .brand-art {
+          min-height: 560px;
+        }
+
+        .art-backdrop {
+          inset: 58px 0 38px 28px;
+        }
+
+        .hero-pack {
+          right: 0;
+          top: 128px;
+          width: 76%;
+          opacity: 0.42;
+        }
+
+        .hero-tag {
+          left: 8px;
+          top: 44px;
+          width: 112px;
+        }
+
+        .hero-tag-back {
+          left: 70px;
+          top: 76px;
+          width: 82px;
+        }
+
+        .hero-body {
+          right: 6px;
+          width: 220px;
+        }
+
+        .hero-body img {
+          height: 280px;
+        }
+
+        .side-note {
+          left: 0;
+          bottom: 0;
+          width: 230px;
+          padding: 18px;
+        }
+
+        .side-note strong {
+          font-size: 25px;
+        }
+
+        .section {
+          padding: 64px 0;
+        }
+
+        .section.alt {
+          scroll-margin-top: 72px;
+        }
+
+        .section-head {
+          gap: 18px;
+          margin-bottom: 24px;
+        }
+
+        h2 {
+          font-size: 43px;
+        }
+
+        .product-card {
+          min-height: 0;
+          max-width: 520px;
+        }
+
+        .product-photo {
+          height: 320px;
+          min-height: 320px;
+          gap: 8px;
+          padding: 8px;
+        }
+
+        .product-copy {
+          min-height: 0;
+          padding: 22px 20px 20px;
+        }
+
+        .product-copy h3 {
+          font-size: 36px;
+        }
+
+        .product-copy p {
+          font-size: 14px;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <nav class="nav shell">
+        <div class="nav-links">
+          <a href="#products">Каталог</a>
+        </div>
+        <a class="logo" href="#">
+          <img src="assets/flower-mark-transparent.png" alt="" />
+          Sofiviola
+        </a>
+        <div class="nav-links">
+          <a href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">Wildberries</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero shell">
+        <div>
+          <span class="eyebrow">Официальная витрина Sofiviola</span>
+          <h1>Sofiviola</h1>
+          <p class="subtitle">Утягивающее белье для гладкого силуэта</p>
+          <p class="lead">
+            Боди, утягивающие шорты, слипы и стринги с мягкой поддержкой
+            талии, живота и линии бедер. Незаметно под одеждой, комфортно
+            на каждый день.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#products">Выбрать модель</a>
+            <a class="btn secondary" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">Открыть на Wildberries</a>
+          </div>
+          <div class="proof-row" aria-label="Преимущества Sofiviola">
+            <div class="proof">
+              <strong>Мягкая поддержка</strong>
+              <span>сглаживает силуэт без ощущения жесткой утяжки</span>
+            </div>
+            <div class="proof">
+              <strong>Незаметно под одеждой</strong>
+              <span>гладкая посадка под платья, брюки и базовые образы</span>
+            </div>
+            <div class="proof">
+              <strong>Комфорт на каждый день</strong>
+              <span>эластичная ткань, высокая посадка и спокойная фиксация</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="brand-art" aria-label="Коллаж Sofiviola">
+          <div class="art-backdrop"></div>
+          <img class="hero-pack" src="assets/pack-new-front.png" alt="Упаковка Sofiviola" />
+          <img class="hero-tag" src="assets/tag-new-front.png" alt="Бирка Sofiviola" />
+          <img class="hero-tag-back" src="assets/tag-new-back.png" alt="Оборотная сторона бирки Sofiviola" />
+          <a class="hero-body" href="https://www.wildberries.ru/catalog/211340775/detail.aspx" target="_blank" rel="noreferrer">
+            <img src="assets/product-body-sofi.jpg" alt="Боди Sofiviola" />
+            <span>Боди SOFI</span>
+          </a>
+          <div class="side-note">
+            <strong>Главное — посадка, силуэт и уверенность под одеждой.</strong>
+            <span>Фирменная упаковка остается аккуратным штрихом к заказу.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="products">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Каталог Sofiviola</span>
+              <h2>Выберите свою модель утягивающего белья</h2>
+            </div>
+            <p>
+              Четыре базовые модели Sofiviola для разных задач: гладкая линия
+              корпуса, поддержка талии, коррекция живота и минимум видимых
+              линий под одеждой. Ниже: модели и дополнительные кадры посадки.
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card colorway">
+              <a class="product-photo" href="https://www.wildberries.ru/catalog/211340775/detail.aspx" target="_blank" rel="noreferrer">
+                <span class="color-shot">
+                  <img src="assets/product-body-beige.jpg" alt="Боди Sofiviola в бежевом цвете" />
+                </span>
+                <span class="color-shot">
+                  <img src="assets/product-body-black.jpg" alt="Боди Sofiviola в черном цвете" />
+                </span>
+              </a>
+              <div class="product-copy">
+                <div>
+                  <h3>Боди</h3>
+                  <p>Гладкая база под одежду с мягкой поддержкой корпуса и регулируемыми бретелями. Подходит для повседневных образов и облегающих вещей.</p>
+                </div>
+                <a class="product-link" href="https://www.wildberries.ru/catalog/211340775/detail.aspx" target="_blank" rel="noreferrer">Открыть на WB</a>
+              </div>
+            </article>
+
+            <article class="product-card colorway">
+              <a class="product-photo" href="https://www.wildberries.ru/catalog/500952682/detail.aspx" target="_blank" rel="noreferrer">
+                <span class="color-shot">
+                  <img src="assets/product-shorts-beige.png" alt="Утягивающие шорты Sofiviola в бежевом цвете" />
+                </span>
+                <span class="color-shot">
+                  <img src="assets/product-shorts-black.png" alt="Утягивающие шорты Sofiviola в черном цвете" />
+                </span>
+              </a>
+              <div class="product-copy">
+                <div>
+                  <h3>Утягивающие шорты</h3>
+                  <p>Поддерживают талию, живот и бедра, помогая создать ровную линию под платьем, юбкой или брюками.</p>
+                </div>
+                <a class="product-link" href="https://www.wildberries.ru/catalog/500952682/detail.aspx" target="_blank" rel="noreferrer">Открыть на WB</a>
+              </div>
+            </article>
+
+            <article class="product-card colorway">
+              <a class="product-photo" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">
+                <span class="color-shot">
+                  <img src="assets/product-slips-beige.jpg" alt="Утягивающие слипы Sofiviola в бежевом цвете" />
+                </span>
+                <span class="color-shot">
+                  <img src="assets/product-slips-black.jpg" alt="Утягивающие слипы Sofiviola в черном цвете" />
+                </span>
+              </a>
+              <div class="product-copy">
+                <div>
+                  <h3>Утягивающие слипы</h3>
+                  <p>Высокая посадка и мягкая фиксация для спокойного силуэта каждый день. Удобный вариант под базовую одежду.</p>
+                </div>
+                <a class="product-link" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">Открыть на WB</a>
+              </div>
+            </article>
+
+            <article class="product-card colorway">
+              <a class="product-photo" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">
+                <span class="color-shot">
+                  <img src="assets/product-strings-beige.jpg" alt="Утягивающие стринги Sofiviola в бежевом цвете" />
+                </span>
+                <span class="color-shot">
+                  <img src="assets/product-strings-black.jpg" alt="Утягивающие стринги Sofiviola в черном цвете" />
+                </span>
+              </a>
+              <div class="product-copy">
+                <div>
+                  <h3>Утягивающие стринги</h3>
+                  <p>Поддержка талии и минимум видимых линий под облегающей одеждой. Для образов, где важна незаметная посадка.</p>
+                </div>
+                <a class="product-link" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">Открыть на WB</a>
+              </div>
+            </article>
+
+            <article class="product-card colorway">
+              <a class="product-photo" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">
+                <span class="color-shot">
+                  <img src="assets/product-slips-extra-black.jpg" alt="Утягивающие слипы Sofiviola в черном цвете, дополнительное фото" />
+                </span>
+                <span class="color-shot">
+                  <img src="assets/product-slips-extra-beige.jpg" alt="Утягивающие слипы Sofiviola в бежевом цвете, дополнительное фото" />
+                </span>
+              </a>
+              <div class="product-copy">
+                <div>
+                  <h3>Слипы в образе</h3>
+                  <p>Дополнительные кадры показывают, как высокая посадка держит линию талии и живота в черном и бежевом оттенке.</p>
+                </div>
+                <a class="product-link" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">Открыть на WB</a>
+              </div>
+            </article>
+
+            <article class="product-card colorway">
+              <a class="product-photo" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">
+                <span class="color-shot">
+                  <img src="assets/product-strings-extra-black.jpg" alt="Утягивающие стринги Sofiviola в черном цвете, дополнительное фото" />
+                </span>
+                <span class="color-shot">
+                  <img src="assets/product-strings-extra-beige.jpg" alt="Утягивающие стринги Sofiviola в бежевом цвете, дополнительное фото" />
+                </span>
+              </a>
+              <div class="product-copy">
+                <div>
+                  <h3>Стринги в образе</h3>
+                  <p>Отдельный блок для моделей, где важны открытая линия бедра, мягкая фиксация талии и минимум следов под одеждой.</p>
+                </div>
+                <a class="product-link" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">Открыть на WB</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing shell">
+        <span class="eyebrow">Официальный магазин</span>
+        <h2>Выберите модель Sofiviola на Wildberries</h2>
+        <p>
+          Посмотрите посадку, сравните модели и перейдите к карточке товара
+          на WB. Витрина помогает выбрать, Wildberries закрывает покупку.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="https://www.wildberries.ru/seller/239450" target="_blank" rel="noreferrer">Перейти на Wildberries</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
