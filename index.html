@@ -16,6 +16,26 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=109887326', 'ym');
+
+      ym(109887326, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109887326" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <style>
       :root {
         --silk: #fffaf4;
@@ -982,5 +1002,22 @@
         </div>
       </section>
     </main>
+
+    <script>
+      document.addEventListener('click', function(event) {
+        var link = event.target.closest && event.target.closest('a');
+        if (!link || typeof ym !== 'function') {
+          return;
+        }
+
+        if (link.hash === '#products') {
+          ym(109887326, 'reachGoal', 'catalog_click');
+        }
+
+        if (link.href && link.href.indexOf('wildberries.ru') !== -1) {
+          ym(109887326, 'reachGoal', 'wildberries_click', { url: link.href });
+        }
+      });
+    </script>
   </body>
 </html>
